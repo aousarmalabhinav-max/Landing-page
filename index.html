@@ -6,28 +6,31 @@
 <title>Launch Your Online Business — Free Webinar</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
+  
   :root{
-    --bg-start: #fff9f2;
-    --bg-end: #fbfbff;
-    --muted:#6b7280;
-    --card:#ffffff;
-    --accent-cyan:#00b3ff;
-    --accent-blue:#0066ff;
-    --accent-green:#16a34a;
-    --cta-start: #06b26a; /* green */
-    --cta-end: #176bff;   /* blue */
-    --orange-stop1: #f97316;
-    --orange-stop2: #d97706;
-    --radius:18px;
-    --shadow: 0 20px 40px rgba(12,20,40,0.08);
+    --bg-start: #0b1220; /* very dark navy */
+    --bg-end: #071026;   /* deep navy */
+    --muted:#9aa4b2;
+    --card:#071220; /* slightly lighter than bg */
+    --card-2:#0f1724;
+    --accent-cyan:#38bdf8;
+    --accent-blue:#60a5fa;
+    --accent-green:#34d399;
+    --cta-start: #10b981; /* green */
+    --cta-end: #3b82f6;   /* blue */
+    --orange-stop1: #fb923c;
+    --orange-stop2: #f59e0b;
+    --radius:16px;
+    --shadow: 0 18px 40px rgba(2,6,23,0.6);
     font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   }
+
   html,body{height:100%}
   body{
     margin:0;
-    background: linear-gradient(90deg,var(--bg-start),var(--bg-end));
+    background: linear-gradient(180deg,var(--bg-start), var(--bg-end));
     -webkit-font-smoothing:antialiased;
-    color:#05204a;
+    color: #e6eef8;
     padding:28px 36px;
   }
 
@@ -55,15 +58,9 @@
     box-shadow: none;
     background:transparent;
   }
-  .brand .title { 
-  font-weight:800; 
-  color:#0b2540; 
-  letter-spacing:0.6px; 
-  font-size:18px; 
-  text-transform:uppercase; 
-}
+  .brand .title { font-weight:800; color:#e6eef8; letter-spacing:0.6px; font-size:18px; text-transform:uppercase; }
   .free-pill {
-    padding:8px 14px;border-radius:999px;background:#e6ffef;color:#087f3f;font-weight:700;font-size:13px;
+    padding:8px 14px;border-radius:999px;background: rgba(255,255,255,0.04); color: var(--accent-green); border:1px solid rgba(255,255,255,0.04);font-weight:700;font-size:13px;
     border:1px solid rgba(3,102,255,0.02);
   }
 
@@ -87,15 +84,9 @@
   }
   .badge {
     display:inline-block;
-    background:#e9f9f8;color:#057a6f;padding:8px 12px;border-radius:999px;font-weight:700;font-size:13px;margin-bottom:10px;
+    background: rgba(255,255,255,0.06); color: var(--accent-green);padding:8px 12px;border-radius:999px;font-weight:700;font-size:13px;margin-bottom:10px;
   }
-  h1 {
-    font-size:56px;
-    line-height:1;
-    margin:6px 0 18px;
-    font-weight:800;
-    color:#071233;
-  }
+  h1 { font-size:56px; line-height:1; margin:6px 0 18px; font-weight:800; color: #e6eef8; }
   /* orange gradient on part of the heading */
   .headline {
     display:inline-block;
@@ -122,8 +113,8 @@
     max-width:100%;
     border-radius:14px;
     padding:18px;
-    background:var(--card);
-    box-shadow: 0 18px 40px rgba(8,20,40,0.05);
+    background:linear-gradient(180deg,var(--card), var(--card-2));
+    box-shadow: 0 18px 40px rgba(2,6,23,0.6);
   }
   .detail-grid { display:grid; grid-template-columns: 1fr 1fr; gap:12px; align-items:center; }
   .detail-item { padding:12px; border-radius:10px; background:linear-gradient(180deg, rgba(255,248,240,0.7), rgba(255,255,255,0.7)); display:flex; gap:12px; align-items:center; }
@@ -132,9 +123,9 @@
   /* Right form card */
   .form-card {
     border-radius:22px;
-    background:var(--card);
+    background:linear-gradient(180deg,var(--card), var(--card-2));
     padding:28px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 20px 50px rgba(2,6,23,0.7);
     width:100%;
   }
   .form-top { text-align:center; margin-bottom:8px; }
@@ -143,18 +134,18 @@
 
   .form-field { margin-bottom:14px; }
   label.fieldlabel { display:block; font-size:13px; color:#17202b; margin-bottom:8px; font-weight:600; }
-  .input {
-    width:100%; padding:14px 14px; border-radius:10px; border:1px solid #eef2f7; background:#fff; font-size:15px;
+  .input { background: rgba(255,255,255,0.02); color: #e6eef8; 
+    width:100%; padding:14px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.06); background: transparent; color: #e6eef8; font-size:15px;
     display:flex; align-items:center; gap:10px;
     box-sizing:border-box;
   }
   .input input { border:none; outline:none; font-size:15px; width:100%; }
   .icon-slc { width:18px; height:18px; opacity:0.45; }
 
-  .cta-btn {
+  .cta-btn { color: #07122a;
     width:100%; padding:14px; border-radius:12px; border:none; cursor:pointer;
-    color:white; font-weight:800; font-size:16px;
-    background: linear-gradient(90deg,var(--cta-start), var(--cta-end));
+    color: #0b1220; font-weight:800; font-size:16px;
+    background: linear-gradient(90deg,var(--cta-start), var(--cta-end)); border: none;
     box-shadow: 0 12px 30px rgba(7,60,255,0.12);
     display:flex; align-items:center; justify-content:center; gap:10px;
   }
@@ -164,7 +155,7 @@
   .small-info { font-size:13px;color:var(--muted); margin-top:12px; text-align:center; }
 
   .muted-ico { width:14px;height:14px; opacity:0.6 }
-.brand .subtitle { color:#4b5563; font-size:12px; }
+.brand .subtitle { color:#9aa4b2; font-size:12px; }
 .logo-full { height:48px; width:auto; display:block; }
 
 /* Mobile improvements */
@@ -176,14 +167,14 @@
   .logo-full { height:36px; }
   .free-pill { padding:6px 10px; font-size:12px; }
   .wrap { grid-template-columns: 1fr; gap:18px; }
-  h1 { font-size:32px; margin-bottom:12px; }
+  h1 { font-size:56px; line-height:1; margin:6px 0 18px; font-weight:800; color: #e6eef8; }
   p.lead { font-size:15px; }
   .detail-card { width:100%; padding:14px; }
   .form-card { padding:20px; }
   .form-top { text-align:center; }
   .form-card { width:100%; box-shadow: 0 10px 30px rgba(12,20,40,0.06); }
-  .cta-btn { font-size:15px; padding:12px; }
-  .input { padding:10px 12px; }
+  .cta-btn { color: #07122a; font-size:15px; padding:12px; }
+  .input { background: rgba(255,255,255,0.02); color: #e6eef8;  padding:10px 12px; }
   .logo-full { display:inline-block; margin-right:8px; }
   .topnav { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; }
   /* Center brand and place pill below on very small screens */
@@ -214,8 +205,73 @@
     border-radius:8px;
     background: rgba(0,0,0,0.85);
   }
-  .brand .title { color: #fff !important; } /* invert title for dark bg if needed */
+  .brand .title { font-weight:800; color:#e6eef8; letter-spacing:0.6px; font-size:18px; text-transform:uppercase; } /* invert title for dark bg if needed */
   .free-pill { order:2; width:100%; margin-top:8px; }
+}
+
+
+.cta-btn{ color: #fff !important; }
+
+label, .form-top, .detail-item div:first-child { color:#e6eef8 !important; }
+
+.input, select, textarea {
+  background: rgba(255,255,255,0.06) !important;
+  color:#e6eef8 !important;
+  border:1px solid rgba(255,255,255,0.15) !important;
+}
+.input::placeholder { color:#9aa4b2 !important; }
+select option { background:#0b1220; color:#e6eef8; }
+
+.detail-card {
+  background: rgba(255,255,255,0.04) !important;
+  color:#e6eef8 !important;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+
+.input, select, textarea {
+  background: #0f1724 !important;
+  color:#e6eef8 !important;
+  border:1px solid rgba(255,255,255,0.12) !important;
+  border-radius:8px;
+}
+.input::placeholder { color:#9aa4b2 !important; }
+select option { background:#0f1724; color:#e6eef8; }
+
+.detail-item {
+  background:#0f1724 !important;
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:10px;
+  padding:10px;
+  color:#e6eef8 !important;
+}
+
+
+.input, input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+  background: #0f1724 !important;
+  color:#e6eef8 !important;
+  border:1px solid rgba(255,255,255,0.15) !important;
+  border-radius:8px;
+  padding:12px 14px;
+  font-size:14px;
+}
+.input::placeholder, input::placeholder { color:#9aa4b2 !important; }
+select option { background:#0f1724; color:#e6eef8; }
+
+
+/* Hover & focus effects */
+.input:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, select:focus, textarea:focus {
+  outline:none !important;
+  border-color:#38bdf8 !important;
+  box-shadow:0 0 8px rgba(56,189,248,0.6);
+}
+.cta-btn:hover {
+  transform:translateY(-1px);
+  box-shadow:0 4px 14px rgba(56,189,248,0.6);
+}
+.cta-btn:active {
+  transform:translateY(0);
+  box-shadow:0 2px 6px rgba(56,189,248,0.4);
 }
 
 </style>
@@ -309,7 +365,7 @@
         <div class="form-field">
           <label class="fieldlabel" for="name">Full Name *</label>
           <div class="input" role="group" aria-labelledby="name">
-            <svg class="icon-slc" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM6 20v-1c0-2.2 3.58-4 6-4s6 1.8 6 4v1" stroke="#9aa6b2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="icon-slc" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM6 20v-1c0-2.2 3.58-4 6-4s6 1.8 6 4v1" stroke="#9aa4b2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <input id="name" name="name" type="text" placeholder="Enter your full name" required>
           </div>
         </div>
@@ -317,7 +373,7 @@
         <div class="form-field">
           <label class="fieldlabel" for="mobile">Mobile Number *</label>
           <div class="input">
-            <svg class="icon-slc" viewBox="0 0 24 24" fill="none"><path d="M22 16.92V21a1 1 0 0 1-1 1 19 19 0 0 1-8.63-2.7 19 19 0 0 1-6-6A19 19 0 0 1 2 3a1 1 0 0 1 1-1h4.09a1 1 0 0 1 1 .75c.2.9.58 2.35 1.18 3.67a1 1 0 0 1-.24 1.05L7.91 9.91a15 15 0 0 0 6 6l1.44-1.44a1 1 0 0 1 1.05-.24c1.31.6 2.77.98 3.66 1.18a1 1 0 0 1 .75 1V16.92z" stroke="#9aa6b2" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="icon-slc" viewBox="0 0 24 24" fill="none"><path d="M22 16.92V21a1 1 0 0 1-1 1 19 19 0 0 1-8.63-2.7 19 19 0 0 1-6-6A19 19 0 0 1 2 3a1 1 0 0 1 1-1h4.09a1 1 0 0 1 1 .75c.2.9.58 2.35 1.18 3.67a1 1 0 0 1-.24 1.05L7.91 9.91a15 15 0 0 0 6 6l1.44-1.44a1 1 0 0 1 1.05-.24c1.31.6 2.77.98 3.66 1.18a1 1 0 0 1 .75 1V16.92z" stroke="#9aa4b2" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <input id="mobile" name="mobile" type="text" placeholder="Enter your mobile number" required>
           </div>
         </div>
@@ -325,7 +381,7 @@
         <div class="form-field">
           <label class="fieldlabel" for="email">Email Address</label>
           <div class="input">
-            <svg class="icon-slc" viewBox="0 0 24 24" fill="none"><path d="M3 8l9 6 9-6" stroke="#9aa6b2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 19H3V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#9aa6b2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="icon-slc" viewBox="0 0 24 24" fill="none"><path d="M3 8l9 6 9-6" stroke="#9aa4b2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 19H3V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#9aa4b2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <input id="email" name="email" type="email" placeholder="Enter your email address">
           </div>
         </div>
@@ -333,7 +389,7 @@
         <div class="form-field">
           <label class="fieldlabel" for="slot">Preferred Slot</label>
           <div class="input">
-            <svg class="icon-slc" viewBox="0 0 24 24" fill="none"><path d="M8 2v4M16 2v4M3 10h18M21 20H3" stroke="#9aa6b2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="icon-slc" viewBox="0 0 24 24" fill="none"><path d="M8 2v4M16 2v4M3 10h18M21 20H3" stroke="#9aa4b2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <select id="slot" name="slot" style="border:none;background:transparent;font-size:15px;outline:none;width:100%">
               <!-- options populated by JS -->
             </select>
