@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Launch Your Online Business — Free Webinar</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-start: #fff9f2;
+    --bg-end: #fbfbff;
+    --muted:#6b7280;
+    --card:#ffffff;
+    --accent-cyan:#00b3ff;
+    --accent-blue:#0066ff;
+    --accent-green:#16a34a;
+    --cta-start: #06b26a; /* green */
+    --cta-end: #176bff;   /* blue */
+    --orange-stop1: #f97316;
+    --orange-stop2: #d97706;
+    --radius:18px;
+    --shadow: 0 20px 40px rgba(12,20,40,0.08);
+    font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  html,body{height:100%}
+  body{
+    margin:0;
+    background: linear-gradient(90deg,var(--bg-start),var(--bg-end));
+    -webkit-font-smoothing:antialiased;
+    color:#05204a;
+    padding:28px 36px;
+  }
+
+  /* Top nav */
+  .topnav {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:18px;
+  background: transparent;
+  padding:10px 20px;
+}
+  .brand {
+    display:flex;
+    gap:12px;
+    align-items:center;
+  }
+  .logo-img {
+    height:44px;        /* lock height */
+    width:auto;         /* let width scale naturally */
+    border-radius:0;    /* no rounding to avoid cropping wide logos */
+    object-fit:contain;
+    display:block;
+    box-shadow: none;
+    background:transparent;
+  }
+  .brand .title { 
+  font-weight:800; 
+  color:#0b2540; 
+  letter-spacing:0.6px; 
+  font-size:18px; 
+  text-transform:uppercase; 
+}
+  .free-pill {
+    padding:8px 14px;border-radius:999px;background:#e6ffef;color:#087f3f;font-weight:700;font-size:13px;
+    border:1px solid rgba(3,102,255,0.02);
+  }
+
+  /* Layout */
+  .wrap {
+    max-width:1180px;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns: 1fr 420px;
+    gap:34px;
+    align-items:start;
+  }
+  @media (max-width:980px){
+    .wrap{grid-template-columns:1fr; padding:0 12px}
+    .form-card{order: -1;margin-bottom:18px}
+  }
+
+  /* Left hero */
+  .hero {
+    padding: 14px 4px;
+  }
+  .badge {
+    display:inline-block;
+    background:#e9f9f8;color:#057a6f;padding:8px 12px;border-radius:999px;font-weight:700;font-size:13px;margin-bottom:10px;
+  }
+  h1 {
+    font-size:56px;
+    line-height:1;
+    margin:6px 0 18px;
+    font-weight:800;
+    color:#071233;
+  }
+  /* orange gradient on part of the heading */
+  .headline {
+    display:inline-block;
+    background: linear-gradient(90deg, var(--orange-stop1), var(--orange-stop2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  p.lead {
+    color:var(--muted);
+    font-size:17px;
+    line-height:1.6;
+    max-width:680px;
+  }
+
+  .kpis { display:flex; gap:18px; margin-top:18px; align-items:center; flex-wrap:wrap;}
+  .kpi { display:flex; gap:8px; align-items:center; color:var(--muted); font-weight:600; font-size:14px;}
+  .kpi .dot { width:10px;height:10px;border-radius:50%;background:#00c853; box-shadow: 0 0 0 4px rgba(0,200,83,0.06); }
+
+  /* small webinar details card */
+  .detail-card {
+    margin-top:28px;
+    width: 420px;
+    max-width:100%;
+    border-radius:14px;
+    padding:18px;
+    background:var(--card);
+    box-shadow: 0 18px 40px rgba(8,20,40,0.05);
+  }
+  .detail-grid { display:grid; grid-template-columns: 1fr 1fr; gap:12px; align-items:center; }
+  .detail-item { padding:12px; border-radius:10px; background:linear-gradient(180deg, rgba(255,248,240,0.7), rgba(255,255,255,0.7)); display:flex; gap:12px; align-items:center; }
+  .detail-item svg{opacity:0.9}
+
+  /* Right form card */
+  .form-card {
+    border-radius:22px;
+    background:var(--card);
+    padding:28px;
+    box-shadow: var(--shadow);
+    width:100%;
+  }
+  .form-top { text-align:center; margin-bottom:8px; }
+  .free100 { color:var(--accent-green); font-size:28px; font-weight:800; margin-bottom:6px; }
+  .smallmuted { color:var(--muted); font-weight:600; margin-bottom:12px; }
+
+  .form-field { margin-bottom:14px; }
+  label.fieldlabel { display:block; font-size:13px; color:#17202b; margin-bottom:8px; font-weight:600; }
+  .input {
+    width:100%; padding:14px 14px; border-radius:10px; border:1px solid #eef2f7; background:#fff; font-size:15px;
+    display:flex; align-items:center; gap:10px;
+    box-sizing:border-box;
+  }
+  .input input { border:none; outline:none; font-size:15px; width:100%; }
+  .icon-slc { width:18px; height:18px; opacity:0.45; }
+
+  .cta-btn {
+    width:100%; padding:14px; border-radius:12px; border:none; cursor:pointer;
+    color:white; font-weight:800; font-size:16px;
+    background: linear-gradient(90deg,var(--cta-start), var(--cta-end));
+    box-shadow: 0 12px 30px rgba(7,60,255,0.12);
+    display:flex; align-items:center; justify-content:center; gap:10px;
+  }
+  .cta-row { margin-top:12px; }
+
+  .note { font-size:13px; color:var(--muted); margin-top:10px; text-align:center; }
+  .small-info { font-size:13px;color:var(--muted); margin-top:12px; text-align:center; }
+
+  .muted-ico { width:14px;height:14px; opacity:0.6 }
+.brand .subtitle { color:#4b5563; font-size:12px; }
+.logo-full { height:48px; width:auto; display:block; }
+
+/* Mobile improvements */
+@media (max-width: 600px) {
+  body { padding:16px 12px; }
+  .topnav { padding:8px 0; }
+  .brand { gap:10px; }
+  .brand { align-items:center; }
+  .logo-full { height:36px; }
+  .free-pill { padding:6px 10px; font-size:12px; }
+  .wrap { grid-template-columns: 1fr; gap:18px; }
+  h1 { font-size:32px; margin-bottom:12px; }
+  p.lead { font-size:15px; }
+  .detail-card { width:100%; padding:14px; }
+  .form-card { padding:20px; }
+  .form-top { text-align:center; }
+  .form-card { width:100%; box-shadow: 0 10px 30px rgba(12,20,40,0.06); }
+  .cta-btn { font-size:15px; padding:12px; }
+  .input { padding:10px 12px; }
+  .logo-full { display:inline-block; margin-right:8px; }
+  .topnav { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; }
+  /* Center brand and place pill below on very small screens */
+  @media (max-width: 420px) {
+    .topnav { justify-content:center; gap:8px; }
+    .free-pill { order:2; width:100%; text-align:center; margin-top:8px; }
+    .brand { order:1; width:100%; justify-content:center; }
+  }
+}
+
+
+/* Force logo visibility and sizing on all screens */
+.logo-full, .logo-img, img[src$="logo.png"], img[src$="logo-full.png"] {
+  display:inline-block !important;
+  height:44px !important;
+  width:auto !important;
+  max-width:180px !important;
+  opacity:1 !important;
+  filter: none !important;
+  background: transparent !important;
+}
+
+/* On very small screens, give the logo a small dark rounded background so white parts show */
+@media (max-width:420px) {
+  .logo-wrap, .brand { display:flex; align-items:center; gap:8px; }
+  .logo-full, .logo-img {
+    padding:6px;
+    border-radius:8px;
+    background: rgba(0,0,0,0.85);
+  }
+  .brand .title { color: #fff !important; } /* invert title for dark bg if needed */
+  .free-pill { order:2; width:100%; margin-top:8px; }
+}
+
+</style>
+</head>
+<body>
+  <div class="topnav" role="navigation" aria-label="Top navigation">
+    <div class="brand">
+  <div class="logo-wrap"><img src="logo-full.png" alt="IDIGITALPRENEUR" class="logo-full" />
+</div>
+        <div class="subtitle">THE DIGITAL UNIVERSITY</div>
+      </div>
+    </div>
+    <div class="free-pill">FREE WEBINAR</div>
+  </div>
+
+  <main class="wrap" role="main">
+    <!-- LEFT: Hero -->
+    <section class="hero">
+      <div>
+        <div class="badge">✶ FREE Live Webinar Today</div>
+        <h1>
+          Launch Your <span class="headline">Online Business</span>
+        </h1>
+        <p class="lead">Join our FREE webinar to watch real demonstrations of how creators grow on social media and monetize through affiliate marketing. This session is an overview — Mr Ankit Bansal will explain the courses we offer, how each course helps you learn the skills, and how you can use affiliate marketing with those skills. The webinar is informational and will show how our courses teach hands-on marketing, content creation, and monetization strategies.</p>
+
+        <div class="kpis">
+          <div class="kpi"><span class="dot"></span>100% Free</div>
+          <div class="kpi">🔴 Live Session</div>
+          <div class="kpi">⏱️ 45 Minutes</div>
+        </div>
+
+        <div class="detail-card" aria-hidden="false">
+          <div style="font-weight:700;margin-bottom:10px">Webinar Details</div>
+          <div class="detail-grid">
+            <div class="detail-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex-shrink:0">
+                <path d="M7 10V3M17 10V3M3 7H21M5 21H19C20.1 21 21 20.1 21 19V8H3V19C3 20.1 3.9 21 5 21Z" stroke="#ff7a2d" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <div style="font-size:13px;color:var(--muted)">Date</div>
+                <div style="font-weight:700" id="detail-date">Sept 25, 2025</div>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex-shrink:0">
+                <path d="M12 7v5l3 3" stroke="#176bff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="9" stroke="#176bff" stroke-width="1.2" />
+              </svg>
+              <div>
+                <div style="font-size:13px;color:var(--muted)">Time</div>
+                <div style="font-weight:700">7:00 PM IST</div>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex-shrink:0">
+                <path d="M12 12c2.8 0 5-2.2 5-5s-2.2-5-5-5-5 2.2-5 5 2.2 5 5 5z" stroke="#06b26a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 21c0-3.3 4-6 9-6s9 2.7 9 6" stroke="#06b26a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <div style="font-size:13px;color:var(--muted)">Host</div>
+                <div style="font-weight:700">Ankit Bansal</div>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex-shrink:0">
+                <path d="M8 7h8M8 12h8M8 17h5" stroke="#9b59ff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <div style="font-size:13px;color:var(--muted)">Platform</div>
+                <div style="font-weight:700">Zoom</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+<div style="margin-top:10px; font-size:13px; color:var(--muted)">Available on Android & iOS (Google Play & App Store).</div>
+    </section>
+
+    <!-- RIGHT: Form Card -->
+    <aside class="form-card" aria-label="Registration form">
+      <div class="form-top">
+        <div class="free100">100% FREE</div>
+        <div class="smallmuted">No Hidden Charges • No Payment Required</div>
+      </div>
+
+      <form id="regForm" class="card-inner" autocomplete="off" style="margin-top:10px">
+        <div class="form-field">
+          <label class="fieldlabel" for="name">Full Name *</label>
+          <div class="input" role="group" aria-labelledby="name">
+            <svg class="icon-slc" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM6 20v-1c0-2.2 3.58-4 6-4s6 1.8 6 4v1" stroke="#9aa6b2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <input id="name" name="name" type="text" placeholder="Enter your full name" required>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label class="fieldlabel" for="mobile">Mobile Number *</label>
+          <div class="input">
+            <svg class="icon-slc" viewBox="0 0 24 24" fill="none"><path d="M22 16.92V21a1 1 0 0 1-1 1 19 19 0 0 1-8.63-2.7 19 19 0 0 1-6-6A19 19 0 0 1 2 3a1 1 0 0 1 1-1h4.09a1 1 0 0 1 1 .75c.2.9.58 2.35 1.18 3.67a1 1 0 0 1-.24 1.05L7.91 9.91a15 15 0 0 0 6 6l1.44-1.44a1 1 0 0 1 1.05-.24c1.31.6 2.77.98 3.66 1.18a1 1 0 0 1 .75 1V16.92z" stroke="#9aa6b2" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <input id="mobile" name="mobile" type="text" placeholder="Enter your mobile number" required>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label class="fieldlabel" for="email">Email Address</label>
+          <div class="input">
+            <svg class="icon-slc" viewBox="0 0 24 24" fill="none"><path d="M3 8l9 6 9-6" stroke="#9aa6b2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 19H3V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#9aa6b2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <input id="email" name="email" type="email" placeholder="Enter your email address">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label class="fieldlabel" for="slot">Preferred Slot</label>
+          <div class="input">
+            <svg class="icon-slc" viewBox="0 0 24 24" fill="none"><path d="M8 2v4M16 2v4M3 10h18M21 20H3" stroke="#9aa6b2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <select id="slot" name="slot" style="border:none;background:transparent;font-size:15px;outline:none;width:100%">
+              <!-- options populated by JS -->
+            </select>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <button id="submitBtn" class="cta-btn" type="submit">
+            <span id="btnContent">Reserve my spot — FREE</span>
+          </button>
+        </div>
+
+        <div class="note">After registration, you'll get WhatsApp message option to receive Zoom link</div>
+      </form>
+    </aside>
+  </main>
+
+<script>
+/* -------- CONFIG --------
+  Set BACKEND_URL to your API endpoint (without trailing slash) if you want server-side saves.
+  Set CLIENT_ONLY = true to skip server and open WhatsApp directly (no server saves).
+  Set WHATSAPP_NUMBER to include country code, e.g. 919850896631.
+*/
+const BACKEND_URL = ""; // e.g. "https://your-backend.onrender.com"
+const CLIENT_ONLY = true; // true = direct WA, false = POST to BACKEND_URL
+const WHATSAPP_NUMBER = "919850896631";
+/* ------------------------- */
+
+
+/* Populate slots in IST and include weekday (e.g. Sun 21 Sept, 7:00 PM IST) */
+function monthName(idx){
+  const arr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+  return arr[idx] || '';
+}
+function weekdayShort(idx){
+  return ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][idx] || '';
+}
+function formatDateLabelIST(date){ // date is a Date object in IST-equivalent calendar
+  const d = date.getDate();
+  const m = monthName(date.getMonth());
+  const wd = weekdayShort(date.getDay());
+  return `${wd} ${d} ${m}, 7:00 PM IST`;
+}
+function getNowInIST() {
+  const now = new Date();
+  const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+  const istOffsetMs = 5.5 * 60 * 60 * 1000;
+  return new Date(utc + istOffsetMs);
+}
+function populateSlots(){
+  const sel = document.getElementById('slot');
+  if(!sel) return;
+  sel.innerHTML = '';
+  const istNow = getNowInIST();
+  const currentISTHour = istNow.getHours();
+  const startOffsetDays = (currentISTHour >= 19) ? 1 : 0;
+  for(let i=0;i<3;i++){
+    const dayOffset = startOffsetDays + i;
+    // create IST calendar date for the slot day
+    const slotIST = new Date(istNow.getFullYear(), istNow.getMonth(), istNow.getDate() + dayOffset);
+    const label = formatDateLabelIST(slotIST);
+    const option = document.createElement('option');
+    // create UTC ISO timestamp corresponding to IST 19:00 (which is 13:30 UTC)
+    const istYear = slotIST.getFullYear();
+    const istMonth = slotIST.getMonth();
+    const istDate = slotIST.getDate();
+    const ist19ms = Date.UTC(istYear, istMonth, istDate, 13, 30, 0); // 19:00 IST == 13:30 UTC
+    const isoUTC = new Date(ist19ms).toISOString();
+    option.value = isoUTC;
+    option.textContent = label;
+    sel.appendChild(option);
+  }
+  // update detail card to show first available slot label
+  const detailDate = document.getElementById('detail-date');
+  if(detailDate && sel.options.length>0){
+    detailDate.textContent = sel.options[0].textContent;
+  }
+}
+document.addEventListener('DOMContentLoaded', populateSlots);
+
+
+/* Form behavior (same as before) */
+const form = document.getElementById('regForm');
+const btn = document.getElementById('submitBtn');
+const btnContent = document.getElementById('btnContent');
+
+function setLoading(loading) {
+  if(loading){ btn.disabled = true; btnContent.innerHTML = 'Processing...'; }
+  else { btn.disabled = false; btnContent.innerHTML = 'Reserve my spot — FREE'; }
+}
+
+function buildWhatsAppUrl(number, name, mobile, email, slot) {
+  const text = `Hello, I registered for the webinar. Name: ${name}. Mobile: ${mobile}. Email: ${email || 'N/A'}. Slot: ${slot || 'Any'}. Host: Ankit Bansal`;
+  return `https://wa.me/${number}?text=` + encodeURIComponent(text);
+}
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  setLoading(true);
+
+  const name = document.getElementById('name').value.trim();
+  const mobile = document.getElementById('mobile').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const slot = document.getElementById('slot').value || '';
+
+  if(!name || !mobile){
+    alert('Please enter your name and mobile.');
+    setLoading(false);
+    return;
+  }
+
+  try {
+    if(CLIENT_ONLY || !BACKEND_URL){
+      const wa = buildWhatsAppUrl(WHATSAPP_NUMBER, name, mobile, email, slot);
+      window.location.href = wa;
+      return;
+    }
+
+    const payload = { name, mobile, email, slot, source: 'landing_page' };
+    const resp = await fetch(BACKEND_URL + '/api/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    if(!resp.ok){ throw new Error('Registration failed'); }
+    const data = await resp.json();
+    if(data.whatsapp_url){
+      window.location.href = data.whatsapp_url;
+    } else {
+      const wa = buildWhatsAppUrl(WHATSAPP_NUMBER, name, mobile, email, slot);
+      window.location.href = wa;
+    }
+  } catch(err){
+    console.error(err);
+    alert('Error: ' + (err.message || 'Something went wrong'));
+  } finally {
+    setLoading(false);
+  }
+});
+</script>
+</body>
+</html>
