@@ -274,6 +274,24 @@ select option { background:#0f1724; color:#e6eef8; }
   box-shadow:0 2px 6px rgba(56,189,248,0.4);
 }
 
+
+/* Founder & Host styles - centered responsive */
+.fh-grid { display:grid; grid-template-columns: 1fr 1fr; gap:48px; align-items:start; }
+.fh-card { display:flex; gap:20px; align-items:flex-start; }
+.fh-photo { width:160px; height:160px; border-radius:14px; object-fit:contain; flex-shrink:0; box-shadow:0 14px 36px rgba(2,6,23,0.6); }
+.fh-card-inner { max-width:620px; }
+.fh-label { font-weight:800; color:var(--accent-blue); font-size:19px; margin-bottom:6px; }
+.fh-name { font-weight:800; color:#fff; font-size:18px; margin:0 0 8px 0; }
+.fh-bio { color:var(--muted); font-size:15px; line-height:1.6; }
+.fh-links { margin-top:12px; font-weight:700; }
+.fh-links a { color:var(--accent-blue); text-decoration:none; margin-right:14px; }
+@media (max-width:880px) {
+  .fh-grid { grid-template-columns:1fr; gap:32px; }
+  .fh-card { flex-direction:column; align-items:center; text-align:center; }
+  .fh-card-inner { max-width:100%; }
+  .fh-photo { width:140px; height:140px; margin-bottom:12px; }
+}
+
 </style>
 </head>
 <body>
@@ -406,6 +424,37 @@ select option { background:#0f1724; color:#e6eef8; }
       </form>
     </aside>
   </main>
+
+
+<!-- START: Meet Founder & Host -->
+<section class="founder-host" style="width:100%; padding:48px 0 64px;">
+  <div class="fh-wrap" style="max-width:1180px; margin:0 auto; padding:0 20px; box-sizing:border-box;">
+    <div class="fh-grid">
+      <div class="fh-card">
+        <img src="ashutosh.jpg" alt="Ashutosh Pratihast" class="fh-photo" />
+        <div class="fh-card-inner">
+          <div class="fh-label">Meet the Founder</div>
+          <div class="fh-name">Ashutosh Pratihast</div>
+          <div class="fh-bio">Founder &amp; CEO, IDIGITALPRENEUR — bootstrapped to ₹100+ Cr. Creator &amp; educator with 1.5M+ YouTube subscribers and a large Instagram community. He builds courses that teach creators &amp; freelancers how to grow and monetize their skills.</div>
+          <div class="fh-links"><a href="https://instagram.com/idigitalpreneur" target="_blank">@idigitalpreneur</a> <a href="https://instagram.com/ashutoshpratihast" target="_blank">@ashutoshpratihast</a></div>
+        </div>
+      </div>
+
+      <div class="fh-card">
+        <img src="ankit.jpg" alt="Ankit Bansal" class="fh-photo" />
+        <div class="fh-card-inner">
+          <div class="fh-label">Meet the Host</div>
+          <div class="fh-name">Ankit Bansal</div>
+          <div class="fh-bio">Host of the webinar — Mr Ankit Bansal will explain the courses we offer, the practical skills you'll learn, and how you can use affiliate marketing to monetize your content.</div>
+          <div class="fh-links"><a href="https://instagram.com/idigitalpreneur" target="_blank">@idigitalpreneur</a> <a href="https://instagram.com/ankitbansal" target="_blank">@ankitbansal</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END: Meet Founder & Host -->
+
+
 
 <script>
 /* -------- CONFIG --------
